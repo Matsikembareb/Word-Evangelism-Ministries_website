@@ -100,3 +100,16 @@ header img {
     margin: 0 auto 10px; /* Centers the logo and adds spacing below it */
     border-radius: 5px; /* Optional: Adds slight rounding to the edges */
 }
+/* Media queries */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    form {
+        padding: 5px;
+    }
+}
