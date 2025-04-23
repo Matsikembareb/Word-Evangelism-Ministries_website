@@ -1,0 +1,5 @@
+// Handle newsletter form submission
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for subscribing!');
+});
