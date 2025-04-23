@@ -8,108 +8,76 @@ body {
     line-height: 1.6;
 }
 
+/* Header Styles */
 header {
-    background-color: #333; /* Dark gray */
-    color: #fff; /* White text */
-    padding: 20px 0;
     text-align: center;
-    border-bottom: 4px solid #6ca0dc; /* Light blue accent */
+    padding: 20px;
+    background-color: #f0f8ff;
+}
+
+header img {
+    max-width: 120px;
+    margin-bottom: 10px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    color: #003366;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0;
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #003366;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #00509e;
 }
 
+/* Main Section Styles */
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 10px;
+    display: flex; /* Creates a row layout */
+    gap: 20px; /* Space between left and right columns */
+    padding: 20px;
 }
 
-section {
-    margin: 20px 0;
+/* Left Column (Bible Verses) */
+main section:first-child {
+    flex: 1; /* Takes up smaller portion */
+    background-color: #fef6e4; /* Light beige */
     padding: 15px;
-    background-color: #fff; /* White background for contrast */
-    border: 1px solid #ccc; /* Light gray border */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-h2 {
-    color: #6ca0dc; /* Accent color */
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-form input, form textarea, form button {
-    padding: 10px;
-    font-size: 1rem;
+/* Right Column (Call to Action) */
+main section:last-child {
+    flex: 2; /* Larger column for content */
+    padding: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-form button {
-    background-color: #6ca0dc; /* Button color */
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
+/* Section Titles */
+h2 {
+    color: #6ca0dc; /* Accent color for section headers */
 }
 
-form button:hover {
-    background-color: #5a8bb0; /* Darker blue on hover */
-}
-
+/* Footer Styles */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
-    border-top: 4px solid #6ca0dc;
-}
-header img {
-    display: block;
-    margin: 0 auto 10px; /* Centers the logo and adds spacing below it */
-    border-radius: 5px; /* Optional: Adds slight rounding to the edges */
-}
-/* Media queries */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    form {
-        padding: 5px;
-    }
 }
