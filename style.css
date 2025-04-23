@@ -1,25 +1,25 @@
 /* General Styles */
 body {
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff; /* White background */
-    color: #333; /* Keeps text dark and readable */
+    color: #333; /* Dark gray for readability */
     line-height: 1.6;
 }
 
 /* Header Styles */
 .full-width-logo {
-    width: 50%; /* Reduces the logo to half its current width */
+    width: 40%; /* Reduces the logo to half its current width */
     height: auto; /* Keeps the aspect ratio intact */
     display: block; /* Centers the logo */
     margin: 0 auto; /* Adds automatic margins to center it horizontally */
 }
-/* Adjust header styling */
+
 header {
-    text-align: center; /* Centers the title beneath the logo */
-    padding: 20px; /* Removes any additional padding that interferes with the logo */
-    background-color: transparent; /* Optional: Can add a background color behind the logo */
+    text-align: center;
+    padding: 20px;
+    background-color: transparent; /* Transparent background */
 }
 
 header h1 {
@@ -42,34 +42,45 @@ main {
 /* Bible Verse Sections */
 .bible-verse {
     margin-bottom: 20px;
-    background-color: transparent;
-    border-left: 5px solid #6ca0dc;
-    padding-left: 10px;
-    background-color: transparent;
-    /*Whiteforcontrast*/border-radius: 5px;
+    background-color: #f9f9f9;
+    /*Lightgrayforsubtlecontrast*/border-left: 5px solid #003366;
+    /*Blueaccentborder*/padding-left: 15px;
+    border-radius: 5px;
     /*Roundedcorners*/padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+     /* Subtle shadow effect */
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
 
-/* Call to Action Section */
-.call-to-action {
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+.bible-verse h2 {
+    font-size: 1.8rem;
+    color: #003366; /* Deep blue for headers */
+    margin-bottom: 10px;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
+/* Call to Action Section */
+.call-to-action {
+        background-color: transparent; /* Reverted to transparent background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
     text-align: center;
-    padding: 10px;
-    font-size: 0.9rem;
+
 }
+
+.call-to-action h2 {
+    font-size: 1.8rem;
+    color: #6ca0dc; /* Light blue for emphasis */
+}
+
+.call-to-action p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Contact Section */
 .contact-section {
     text-align: center;
     background-color: #fff; /* Plain white background */
@@ -92,4 +103,73 @@ footer {
 
 .contact-section strong {
     color: #6ca0dc; /* Highlight the labels in light blue */
+}
+
+/* Custom Footer */
+.custom-footer {
+    background-color: transparent; /* Reverted to transparent background */
+    color: #333; /* Dark gray for text */
+    text-align: center;
+    padding: 20px;
+    border-top: none; /* Removed the blue top border */
+}
+
+.custom-footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+.subscribe-section {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #003366;
+    border-radius: 5px;
+}
+
+.subscribe-section input[type="email"] {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+}
+
+.subscribe-section button {
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-section button:hover {
+    background-color: #6ca0dc;
+}
+.photo-gallery .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.photo-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.video-library .video-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.video-library iframe {
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
