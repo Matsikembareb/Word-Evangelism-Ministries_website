@@ -1,215 +1,283 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* Call to Action Section */
+.cta-section {
+    text-align: left;
+    padding: 0; /* Remove padding */
+    margin: 2rem auto; /* Match bible-verse margins */
+    max-width: 800px; /* Match bible-verse max-width */
+    background-color: transparent; /* Remove background color */
+}
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cta-leading-bar {
+    background-color: var(--primary-color);
+    width: 0.5rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.cta-heading-primary {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.cta-heading-secondary {
+    color: var(--primary-color);
+    font-size: 4rem;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: normal;
+    margin: 0 0 0 0.5rem;
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-left: calc(0.5rem + 1rem);
+}
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #fff; /* White background */
-    color: #333; /* Dark gray for readability */
+}
+
+:root {
+    --primary-color: #003366;
+    --secondary-color: #6ca0dc;
+    --text-color: #333;
+    --background-light: #f9f9f9;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+    padding-top: 0; /* Remove padding since nav is no longer fixed */
+}
+
+/* Accessibility Helpers */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Modified Navigation Styles */
+.nav-wrapper {
+    width: 100%;
+    background-color: var(--white);
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.top-nav {
+    width: 100%;
+    background-color: var(--white);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.nav-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--secondary-color);
+    background-color: transparent;
 }
 
 /* Header Styles */
-.full-width-logo {
-    width: 40%; /* Reduces the logo to half its current width */
-    height: auto; /* Keeps the aspect ratio intact */
-    display: block; /* Centers the logo */
-    margin: 0 auto; /* Adds automatic margins to center it horizontally */
-}
-
-header {
+.main-header {
     text-align: center;
-    padding: 20px;
-    background-color: transparent; /* Transparent background */
+    padding: 2rem 1rem;
 }
 
-header h1 {
-    font-size: 2rem;
-    color: #003366;
+.site-logo {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
 }
 
-.header-line {
-    border: none;
+.header-divider {
+    border: 0;
     height: 2px;
-    background-color: #003366;
-    margin-top: 10px;
-}
-
-/* Main Section Styles */
-main {
-    padding: 20px;
-}
-
-/* Bible Verse Sections */
-.bible-verse {
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    /*Lightgrayforsubtlecontrast*/border-left: 5px solid #003366;
-    /*Blueaccentborder*/padding-left: 15px;
-    border-radius: 5px;
-    /*Roundedcorners*/padding: 15px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-     /* Subtle shadow effect */
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-
-.bible-verse h2 {
-    font-size: 1.8rem;
-    color: #003366; /* Deep blue for headers */
-    margin-bottom: 10px;
-}
-
-/* Call to Action Section */
-.call-to-action {
-        background-color: transparent; /* Reverted to transparent background */
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    text-align: center;
-
-}
-
-.call-to-action h2 {
-    font-size: 1.8rem;
-    color: #6ca0dc; /* Light blue for emphasis */
-}
-
-.call-to-action p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-}
-
-/* Contact Section */
-.contact-section {
-    text-align: center;
-    background-color: #fff; /* Plain white background */
-    padding: 20px;
-    border-top: 2px solid #6ca0dc; /* Matches the blue accent color */
-    border-bottom: 2px solid #6ca0dc; /* Blue border at the bottom */
-    margin-bottom: 20px;
-}
-
-.contact-section h2 {
-    color: #003366; /* Dark blue for the heading */
-    margin-bottom: 10px;
-}
-
-.contact-section p {
-    margin: 5px 0;
-    font-size: 1rem;
-    color: #333; /* Dark gray for readability */
-}
-
-.contact-section strong {
-    color: #6ca0dc; /* Highlight the labels in light blue */
-}
-
-/* Custom Footer */
-.custom-footer {
-    background-color: transparent; /* Reverted to transparent background */
-    color: #333; /* Dark gray for text */
-    text-align: center;
-    padding: 20px;
-    border-top: none; /* Removed the blue top border */
-}
-
-.custom-footer p {
-    margin: 0;
-    font-size: 1rem;
-}
-.subscribe-section {
-    text-align: center;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 2px solid #003366;
-    border-radius: 5px;
-}
-
-.subscribe-section input[type="email"] {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    background-color: var(--primary-color);
+    margin: 1rem auto;
     width: 80%;
 }
 
-.subscribe-section button {
-    padding: 10px 20px;
-    background-color: #003366;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.subscribe-section button:hover {
-    background-color: #6ca0dc;
-}
-.photo-gallery .image-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.photo-gallery img {
-    width: 200px;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-.video-library .video-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.video-library iframe {
-    width: 300px;
-    height: 200px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 200px;
-    background-color: #003366; /* Deep blue background */
-    color: white;
-    padding-top: 20px;
-    text-align: center;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar ul {
-    list-style-type: none;
+/* Updated Bible Verse Sections */
+.bible-verse {
+    margin: 2rem auto;
     padding: 0;
+    max-width: 800px;
+    position: relative;
+    background-color: transparent;
+    border-left: none;
+    box-shadow: none;
 }
 
-.sidebar ul li {
-    margin: 20px 0;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: white;
+.verse-heading {
+    color: var(--white);
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
     font-size: 1.2rem;
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 0.75rem;
+    margin-left: 1rem;
+    line-height: 1; /* Ensure consistent line height */
 }
 
-.sidebar ul li a:hover {
-    background-color: #6ca0dc; /* Light blue hover effect */
-    color: white;
+.verse-heading::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 0; /* Align to the top */
+    /* transform: translateY(-50%); */ /* Remove vertical centering */
+    width: 0.75rem;
+    height: 100%; /* Make it 100% of parent height */
+    background-color: var(--primary-color);
+    border: 1px solid var(--white);
 }
 
-main {
-    margin-left: 220px; /* Adds space for the sidebar */
-    padding: 20px;
+.verse-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    padding-left: 1rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.verse-commentary {
+    padding: 0;
+    background-color: transparent;
+    border-left: none;
+    margin: 0.5rem 0 2rem;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Call to Action Section */
+.cta-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin: 3rem 0;
+    background-color: var(--background-light);
+}
+
+.cta-heading {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-heading {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.subscription-form {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.subscription-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 250px;
+}
+
+.submit-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .site-logo {
+        max-width: 200px;
+    }
 }
